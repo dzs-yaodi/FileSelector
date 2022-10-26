@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_file_max">最多选择%1$d个文件</string>
+</resources>
