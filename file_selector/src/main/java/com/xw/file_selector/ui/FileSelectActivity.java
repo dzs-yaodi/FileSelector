@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.xw.file_selector.R;
 import com.xw.file_selector.SelectSpec;
+import com.xw.file_selector.databinding.FileSelectorActivitySelectBinding;
 import com.xw.file_selector.utils.FileReaders;
 import com.xw.file_selector.adapter.FileAdapter;
 import com.xw.file_selector.data.FileInfos;
-import com.xw.file_selector.databinding.ActivitySelectBinding;
 import com.xw.file_selector.listener.FileSelectCallBack;
 import com.xw.file_selector.listener.OnItemListener;
 import com.xw.file_selector.utils.StatusBarHelper;
@@ -21,9 +21,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelectActivity extends AppCompatActivity  {
+public class FileSelectActivity extends AppCompatActivity  {
 
-    private ActivitySelectBinding binding;
+    private FileSelectorActivitySelectBinding binding;
     private List<FileInfos> folderlist = new ArrayList<>();
     private int checkPosition = 0;
     private FileAdapter fileAdapter;
@@ -39,7 +39,7 @@ public class SelectActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivitySelectBinding.inflate(getLayoutInflater());
+        binding = FileSelectorActivitySelectBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         StatusBarHelper.translucent(this);
 
@@ -95,7 +95,7 @@ public class SelectActivity extends AppCompatActivity  {
                 } else {
                     String message =  String.format(getString(R.string.select_file_max),
                             SelectSpec.getInstance().maxSelectable);
-                    Toast.makeText(SelectActivity.this,message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FileSelectActivity.this,message, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -112,7 +112,7 @@ public class SelectActivity extends AppCompatActivity  {
 
             @Override
             public void onFailer(String message) {
-                Toast.makeText(SelectActivity.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(FileSelectActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -7,7 +7,7 @@ import android.content.Intent;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.xw.file_selector.ui.SelectActivity;
+import com.xw.file_selector.ui.FileSelectActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -47,7 +47,7 @@ public class FileSelector {
     }
 
     public static List<String> obtainPathsResult(Intent intent) {
-        return intent.getStringArrayListExtra(SelectActivity.REQUEST_SELECT_MEDIAS);
+        return intent.getStringArrayListExtra(FileSelectActivity.REQUEST_SELECT_MEDIAS);
     }
 
     @Nullable

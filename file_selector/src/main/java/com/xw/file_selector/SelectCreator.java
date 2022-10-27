@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import androidx.fragment.app.Fragment;
 
 import com.xw.file_selector.listener.OnActivityResult;
-import com.xw.file_selector.ui.SelectActivity;
+import com.xw.file_selector.ui.FileSelectActivity;
 
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class SelectCreator {
             return;
         }
 
-        Intent intent = new Intent(activity, SelectActivity.class);
+        Intent intent = new Intent(activity, FileSelectActivity.class);
 
         Fragment fragment = fileSelector.getFragment();
         if (fragment != null) {
@@ -84,7 +84,7 @@ public class SelectCreator {
         router.setActivityResult(activityResult);
         Activity activity = router.getActivity();
 
-        Intent intent = new Intent(activity,SelectActivity.class);
+        Intent intent = new Intent(activity, FileSelectActivity.class);
         router.getActivityResult().launch(intent);
     }
 }

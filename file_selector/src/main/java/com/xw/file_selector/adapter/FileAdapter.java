@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.xw.file_selector.R;
 import com.xw.file_selector.data.FileInfos;
-import com.xw.file_selector.databinding.ItemFileLayoutBinding;
+import com.xw.file_selector.databinding.FileSelectorItemFileLayoutBinding;
 import com.xw.file_selector.listener.OnItemListener;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class FileAdapter extends  RecyclerView.Adapter<FileAdapter.FileViewHolde
     @NonNull
     @Override
     public FileViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemFileLayoutBinding binding = ItemFileLayoutBinding.inflate(LayoutInflater.from(parent.getContext()),
+        FileSelectorItemFileLayoutBinding binding = FileSelectorItemFileLayoutBinding.inflate(LayoutInflater.from(parent.getContext()),
                 parent,false);
         return new FileViewHolder(binding);
     }
@@ -62,9 +62,9 @@ public class FileAdapter extends  RecyclerView.Adapter<FileAdapter.FileViewHolde
 
     class FileViewHolder extends RecyclerView.ViewHolder {
 
-        private ItemFileLayoutBinding binding;
+        private FileSelectorItemFileLayoutBinding binding;
 
-       public FileViewHolder(@NonNull ItemFileLayoutBinding binding) {
+       public FileViewHolder(@NonNull FileSelectorItemFileLayoutBinding binding) {
            super(binding.getRoot());
            this.binding = binding;
 

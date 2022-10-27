@@ -4,7 +4,7 @@
 
     <application>
 
-        <activity android:name=".ui.SelectActivity"
+        <activity android:name=".ui.FileSelectActivity"
             android:screenOrientation="portrait"/>
 
     </application>
